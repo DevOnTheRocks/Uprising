@@ -1,0 +1,156 @@
+{
+   "dimensions":[
+      {
+         "dimension":"+",
+         "ores":[
+            {
+               "blockID":"forestry:resources",
+               "size":12,
+               "variation":6,
+               "frequency":8,
+               "minHeight":48,
+               "maxHeight":80,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"deepresonance:resonating_ore",
+               "size":4,
+               "variation":1,
+               "frequency":8,
+               "minHeight":0,
+               "maxHeight":16,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"enviromentaltech:alabaster",
+               "size":32,
+               "variation":16,
+               "frequency":8,
+               "minHeight":32,
+               "maxHeight":64,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"enviromentaltech:basalt",
+               "size":32,
+               "variation":16,
+               "frequency":16,
+               "minHeight":0,
+               "maxHeight":32,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"enviromentaltech:hardened_stone",
+               "size":32,
+               "variation":8,
+               "frequency":8,
+               "minHeight":0,
+               "maxHeight":16,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"tconstruct:soil",
+               "size":8,
+               "variation":4,
+               "frequency":8,
+               "minHeight":48,
+               "maxHeight":80,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"forestry:bogEarth",
+               "blockMeta":3,
+               "size":4,
+               "variation":2,
+               "frequency":8,
+               "minHeight":48,
+               "maxHeight":80,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"resourcefulcrops:BlockROre",
+               "size":4,
+               "variation":2,
+               "frequency":16,
+               "minHeight":1,
+               "maxHeight":16,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"chancecubes:chance_Cube",
+               "size":1,
+               "variation":1,
+               "frequency":8,
+               "minHeight":1,
+               "maxHeight":64,
+               "biomes":[
+
+               ]
+            }
+         ]
+      },
+      {
+         "dimension":-1,
+         "ores":[
+            {
+               "blockID":"tconstruct:ore",
+               "blockMeta":0,
+               "size":8,
+               "variation":2,
+               "frequency":4,
+               "minHeight":0,
+               "maxHeight":96,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"tconstruct:ore",
+               "blockMeta":1,
+               "size":4,
+               "variation":2,
+               "frequency":16,
+               "minHeight":48,
+               "maxHeight":128,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"resourcefulcrops:BlockROre",
+               "blockMeta":1,
+               "size":8,
+               "variation":4,
+               "frequency":16,
+               "minHeight":0,
+               "maxHeight":128,
+               "biomes":[
+
+               ]
+            }
+         ]
+      },
+      {
+         "dimension":1,
+         "ores":[
+
+         ]
+      }
+   ]
+}
