@@ -26,7 +26,7 @@
                ]
             },
             {
-               "blockID":"enviromentaltech:alabaster",
+               "blockID":"environmentaltech:alabaster",
                "size":32,
                "variation":16,
                "frequency":8,
@@ -37,7 +37,7 @@
                ]
             },
             {
-               "blockID":"enviromentaltech:basalt",
+               "blockID":"environmentaltech:basalt",
                "size":32,
                "variation":16,
                "frequency":16,
@@ -48,7 +48,7 @@
                ]
             },
             {
-               "blockID":"enviromentaltech:hardened_stone",
+               "blockID":"environmentaltech:hardened_stone",
                "size":32,
                "variation":8,
                "frequency":8,
@@ -96,9 +96,9 @@
                "blockID":"chancecubes:chance_Cube",
                "size":1,
                "variation":1,
-               "frequency":8,
+               "frequency":4,
                "minHeight":1,
-               "maxHeight":64,
+               "maxHeight":32,
                "biomes":[
 
                ]
@@ -148,6 +148,34 @@
       },
       {
          "dimension":1,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Abyssal Wasteland",
+        "dimension":50,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dreadlands",
+        "dimension":51,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"Omothol",
+        "dimension":52,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dark Realm",
+         "dimension":53,
          "ores":[
 
          ]

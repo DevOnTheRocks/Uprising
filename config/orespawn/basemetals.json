@@ -10,7 +10,7 @@
                "variation":4,
                "frequency":16,
                "minHeight":48,
-               "maxHeight":128
+               "maxHeight":96
             },
             {
                "blockID":"basemetals:silver_ore",
@@ -104,6 +104,34 @@
                "minHeight":0,
                "maxHeight":255
             }
+         ]
+      },
+      {
+        "__comment":"The Abyssal Wasteland",
+        "dimension":50,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dreadlands",
+        "dimension":51,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"Omothol",
+        "dimension":52,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dark Realm",
+         "dimension":53,
+         "ores":[
+
          ]
       }
    ]

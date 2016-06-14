@@ -18,7 +18,7 @@
                "blockID":"minecraft:iron_ore",
                "size":16,
                "variation":8,
-               "frequency":24,
+               "frequency":16,
                "minHeight":24,
                "maxHeight":80,
                "biomes":[
@@ -51,7 +51,7 @@
                "blockID":"minecraft:redstone_ore",
                "size":4,
                "variation":2,
-               "frequency":32,
+               "frequency":24,
                "minHeight":8,
                "maxHeight":32,
                "biomes":[
@@ -82,9 +82,9 @@
             },
             {
                "blockID":"minecraft:dirt",
-               "size":112,
-               "variation":50,
-               "frequency":10,
+               "size":96,
+               "variation":64,
+               "frequency":16,
                "minHeight":0,
                "maxHeight":255,
                "biomes":[
@@ -96,7 +96,18 @@
                "size":64,
                "variation":16,
                "frequency":4,
-               "minHeight":24,
+               "minHeight":0,
+               "maxHeight":255,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"minecraft:sand",
+               "size":32,
+               "variation":16,
+               "frequency":8,
+               "minHeight":0,
                "maxHeight":255,
                "biomes":[
 
@@ -109,7 +120,7 @@
                "size":64,
                "variation":16,
                "frequency":4,
-               "minHeight":24,
+               "minHeight":16,
                "maxHeight":255,
                "biomes":[
 
@@ -122,7 +133,7 @@
                "size":64,
                "variation":16,
                "frequency":4,
-               "minHeight":24,
+               "minHeight":16,
                "maxHeight":255,
                "biomes":[
 
@@ -135,7 +146,7 @@
                "size":64,
                "variation":16,
                "frequency":4,
-               "minHeight":24,
+               "minHeight":16,
                "maxHeight":255,
                "biomes":[
 
@@ -169,6 +180,34 @@
 
                ]
             }
+         ]
+      },
+      {
+        "__comment":"The Abyssal Wasteland",
+        "dimension":50,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dreadlands",
+        "dimension":51,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"Omothol",
+        "dimension":52,
+         "ores":[
+
+         ]
+      },
+      {
+        "__comment":"The Dark Realm",
+         "dimension":53,
+         "ores":[
+
          ]
       }
    ]
