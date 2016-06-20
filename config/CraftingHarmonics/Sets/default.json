@@ -1,0 +1,54 @@
+{
+   name:"Uprising",
+   description:"Insert Description here.",
+   sets:[
+      {
+         name:"default",
+         operations:[
+            {
+               __comment:"Starting Items",
+               type:"addStarterItem",
+               what:[
+                  "minecraft:apple:*:16"
+               ]
+            },
+            {
+               __comment:"Golden Apple (Enchanted)",
+               type:"addShaped",
+               output:"minecraft:golden_apple:1:",
+               quantity:1,
+               with:[
+                  "minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block",
+                  "minecraft:gold_block", "minecraft:apple", "minecraft:gold_block",
+                  "minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block"
+               ]
+            },
+            {
+               __comment:"Wither Boss can drop a creative modifier",
+               type:"setMobDrops",
+               what:[
+                  "net.minecraft.entity.boss.EntityWither"
+               ],
+               replace:false,
+               drops:[
+                  {
+                     what:"tconstruct:materials:50",
+                     min:1,
+                     max:1,
+                     chance:0.25,
+                     minLooting:3,
+                     attackerHasPotionEffect:"minecraft:luck"
+                  }
+               ]
+            },
+            {
+               __comment:"Recycle TiC Casts",
+               type:"addSmelteryMelt",
+               what:"molten_alubrass",
+               amount:144,
+               with:"tconstruct:cast_custom:*"
+            }
+         ]
+      }
+   ]
+}
