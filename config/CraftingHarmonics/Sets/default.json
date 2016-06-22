@@ -15,13 +15,20 @@
             {
                __comment:"Golden Apple (Enchanted)",
                type:"addShaped",
-               output:"minecraft:golden_apple:1:",
+               output:"minecraft:golden_apple:1",
                quantity:1,
                with:[
                   "minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block",
                   "minecraft:gold_block", "minecraft:apple", "minecraft:gold_block",
                   "minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block"
                ]
+            },
+            {
+                __comment: "Steel Dust",
+                type: "addShapeless",
+                output: "basemetals:steel_powder",
+                quantity: 1,
+                with: ["<dustIron>", "<dustCoal>"]
             },
             {
                __comment:"Wither Boss can drop a creative modifier",

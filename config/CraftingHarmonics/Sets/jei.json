@@ -1,0 +1,21 @@
+{
+   name:"Uprising",
+   description:"Insert Description here.",
+   sets:[
+      {
+         name:"default",
+         operations:[
+            {
+                __comment: "Remove all Tool Forges",
+                type: "hide",
+                what: "tconstruct:toolforge"
+            },
+            {
+               __comment:"Knightslime Tool Forge",
+               type:"show",
+               what:"tconstruct:toolforge:0:1:{textureBlock:{id:\"tconstruct:metal\",Count:1b,Damage:3s}}",
+            }
+         ]
+      }
+   ]
+}

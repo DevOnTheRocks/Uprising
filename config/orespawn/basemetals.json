@@ -6,9 +6,9 @@
          "ores":[
             {
                "blockID":"basemetals:copper_ore",
-               "size":8,
-               "variation":4,
-               "frequency":16,
+               "size":16,
+               "variation":8,
+               "frequency":8,
                "minHeight":48,
                "maxHeight":96
             },
@@ -22,9 +22,9 @@
             },
             {
                "blockID":"basemetals:tin_ore",
-               "size":8,
-               "variation":4,
-               "frequency":16,
+               "size":16,
+               "variation":8,
+               "frequency":8,
                "minHeight":32,
                "maxHeight":64
             },
@@ -78,7 +78,7 @@
                "blockID":"basemetals:coldiron_ore",
                "size":8,
                "variation":4,
-               "frequency":5,
+               "frequency":4,
                "minHeight":0,
                "maxHeight":128
             },
@@ -100,7 +100,7 @@
                "blockID":"basemetals:starsteel_ore",
                "size":8,
                "variation":4,
-               "frequency":5,
+               "frequency":4,
                "minHeight":0,
                "maxHeight":255
             }

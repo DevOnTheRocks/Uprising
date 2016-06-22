@@ -5,9 +5,9 @@
          "ores":[
             {
                "blockID":"minecraft:coal_ore",
-               "size":12,
+               "size":24,
                "variation":8,
-               "frequency":24,
+               "frequency":16,
                "minHeight":32,
                "maxHeight":128,
                "biomes":[
@@ -18,18 +18,18 @@
                "blockID":"minecraft:iron_ore",
                "size":16,
                "variation":8,
-               "frequency":16,
-               "minHeight":24,
-               "maxHeight":80,
+               "frequency":8,
+               "minHeight":32,
+               "maxHeight":72,
                "biomes":[
 
                ]
             },
             {
                "blockID":"minecraft:gold_ore",
-               "size":4,
-               "variation":2,
-               "frequency":12,
+               "size":12,
+               "variation":4,
+               "frequency":4,
                "minHeight":1,
                "maxHeight":24,
                "biomes":[
@@ -37,21 +37,10 @@
                ]
             },
             {
-               "blockID":"minecraft:diamond_ore",
-               "size":2,
-               "variation":2,
-               "frequency":16,
-               "minHeight":1,
-               "maxHeight":16,
-               "biomes":[
-
-               ]
-            },
-            {
                "blockID":"minecraft:redstone_ore",
-               "size":4,
-               "variation":2,
-               "frequency":16,
+               "size":12,
+               "variation":4,
+               "frequency":8,
                "minHeight":8,
                "maxHeight":32,
                "biomes":[
@@ -60,9 +49,9 @@
             },
             {
                "blockID":"minecraft:lapis_ore",
-               "size":4,
-               "variation":2,
-               "frequency":12,
+               "size":8,
+               "variation":4,
+               "frequency":4,
                "minHeight":16,
                "maxHeight":32,
                "biomes":[
@@ -70,10 +59,21 @@
                ]
             },
             {
+               "blockID":"minecraft:diamond_ore",
+               "size":8,
+               "variation":8,
+               "frequency":2,
+               "minHeight":1,
+               "maxHeight":16,
+               "biomes":[
+
+               ]
+            },
+            {
                "blockID":"minecraft:emerald_ore",
-               "size":2,
-               "variation":2,
-               "frequency":16,
+               "size":8,
+               "variation":8,
+               "frequency":2,
                "minHeight":1,
                "maxHeight":16,
                "biomes":[
@@ -85,7 +85,7 @@
                "size":96,
                "variation":64,
                "frequency":16,
-               "minHeight":0,
+               "minHeight":1,
                "maxHeight":255,
                "biomes":[
 
@@ -96,7 +96,7 @@
                "size":64,
                "variation":16,
                "frequency":4,
-               "minHeight":0,
+               "minHeight":1,
                "maxHeight":255,
                "biomes":[
 
@@ -107,7 +107,7 @@
                "size":32,
                "variation":16,
                "frequency":8,
-               "minHeight":0,
+               "minHeight":1,
                "maxHeight":255,
                "biomes":[
 
