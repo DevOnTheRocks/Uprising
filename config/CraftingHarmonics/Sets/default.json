@@ -51,9 +51,24 @@
             {
                __comment:"Recycle TiC Casts",
                type:"addSmelteryMelt",
-               what:"molten_alubrass",
+               what:"alubrass",
+               amount:144,
+               with:"tconstruct:cast:*"
+            },
+            {
+               __comment:"Recycle TiC Custom Casts",
+               type:"addSmelteryMelt",
+               what:"alubrass",
                amount:144,
                with:"tconstruct:cast_custom:*"
+            },
+            {
+                __comment: "Remove BoP Specific Stick Recipe",
+                type: "remove",
+                what: "minecraft:stick",
+                with: [ "biomesoplenty:planks_0:*",
+                        "biomesoplenty:planks_0:*"],
+                height: 2
             }
          ]
       }
