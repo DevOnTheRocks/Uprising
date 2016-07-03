@@ -2,6 +2,118 @@
   "Everything below this line will be regenerated from defaults every time. Remove this line if you do not want that",
   {
     "filter": {
+      "name": "owner",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 0,
+      "create": 0,
+      "maintain": 0,
+      "ticks": 0,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "noanimals",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 2,
+      "create": 5000,
+      "maintain": 40,
+      "ticks": 10,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "spawn",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 2,
+      "create": 10000,
+      "maintain": 300,
+      "ticks": 100,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "seed",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 2,
+      "create": 1000,
+      "maintain": 0,
+      "ticks": 100,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "seed",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 2,
+      "create": 1000,
+      "maintain": 0,
+      "ticks": 100,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "peaceful",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 5,
+      "create": 50000,
+      "maintain": 30000,
+      "ticks": 900,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "efficiency",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 5,
+      "create": 100000,
+      "maintain": -20,
+      "ticks": 900,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
+      "name": "mediocreefficiency",
+      "type": "special"
+    },
+    "settings": {
+      "rarity": 4,
+      "create": 100000,
+      "maintain": -5,
+      "ticks": 400,
+      "worldgen": false,
+      "dimlet": true
+    }
+  },
+  {
+    "filter": {
       "type": "digit"
     },
     "settings": {

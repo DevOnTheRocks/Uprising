@@ -69,6 +69,38 @@
                 with: [ "biomesoplenty:planks_0:*",
                         "biomesoplenty:planks_0:*"],
                 height: 2
+            },
+            {
+                __comment: "Remove Blood Baubles Iron Ring",
+                type: "remove",
+                what: "zdoctorbb:rings/BasicIronRing"
+            },
+            {
+                __comment: "Remove Blood Baubles Gold Ring",
+                type: "remove",
+                what: "zdoctorbb:rings/BasicGoldRing"
+            },
+            {
+               __comment:"Blood Baubles Iron Ring",
+               type:"addShaped",
+               output:"zdoctorbb:rings/BasicIronRing",
+               quantity:1,
+               with:[
+                  "", "<ingotIron>", "",
+                  "<ingotIron>", {item: "bloodmagic:ItemBloodOrb:*", returnOnCraft: true}, "<ingotIron>",
+                  "", "<ingotIron>", ""
+               ]
+            },
+            {
+               __comment:"Blood Baubles Gold Ring",
+               type:"addShaped",
+               output:"zdoctorbb:rings/BasicGoldRing",
+               quantity:1,
+               with:[
+                  "", "<ingotGold>", "",
+                  "<ingotGold>", {item: "bloodmagic:ItemBloodOrb:*", returnOnCraft: true}, "<ingotGold>",
+                  "", "<ingotGold>", ""
+               ]
             }
          ]
       }
