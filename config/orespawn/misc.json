@@ -26,33 +26,11 @@
                ]
             },
             {
-               "blockID":"environmentaltech:alabaster",
-               "size":24,
-               "variation":16,
+               "blockID":"mekanism:OreBlock",
+               "size":8,
+               "variation":4,
                "frequency":4,
-               "minHeight":32,
-               "maxHeight":64,
-               "biomes":[
-
-               ]
-            },
-            {
-               "blockID":"environmentaltech:basalt",
-               "size":24,
-               "variation":16,
-               "frequency":4,
-               "minHeight":0,
-               "maxHeight":32,
-               "biomes":[
-
-               ]
-            },
-            {
-               "blockID":"environmentaltech:hardened_stone",
-               "size":24,
-               "variation":16,
-               "frequency":4,
-               "minHeight":0,
+               "minHeight":1,
                "maxHeight":16,
                "biomes":[
 
@@ -83,7 +61,7 @@
             },
             {
                "blockID":"resourcefulcrops:BlockROre",
-               "size":16,
+               "size":8,
                "variation":4,
                "frequency":4,
                "minHeight":1,
@@ -114,7 +92,7 @@
                "size":8,
                "variation":4,
                "frequency":4,
-               "minHeight":0,
+               "minHeight":1,
                "maxHeight":96,
                "biomes":[
 
@@ -138,7 +116,40 @@
                "size":16,
                "variation":8,
                "frequency":8,
-               "minHeight":0,
+               "minHeight":1,
+               "maxHeight":128,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"environmentaltech:alabaster",
+               "size":32,
+               "variation":16,
+               "frequency":4,
+               "minHeight":1,
+               "maxHeight":128,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"environmentaltech:basalt",
+               "size":32,
+               "variation":16,
+               "frequency":4,
+               "minHeight":1,
+               "maxHeight":128,
+               "biomes":[
+
+               ]
+            },
+            {
+               "blockID":"environmentaltech:hardened_stone",
+               "size":32,
+               "variation":16,
+               "frequency":4,
+               "minHeight":1,
                "maxHeight":128,
                "biomes":[
 
