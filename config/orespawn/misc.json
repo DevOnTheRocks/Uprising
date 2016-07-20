@@ -18,7 +18,7 @@
                "blockID":"deepresonance:resonating_ore",
                "size":8,
                "variation":4,
-               "frequency":4,
+               "frequency":2,
                "minHeight":1,
                "maxHeight":16,
                "biomes":[
@@ -29,9 +29,9 @@
                "blockID":"mekanism:OreBlock",
                "size":8,
                "variation":4,
-               "frequency":4,
+               "frequency":2,
                "minHeight":1,
-               "maxHeight":16,
+               "maxHeight":32,
                "biomes":[
 
                ]
@@ -63,7 +63,7 @@
                "blockID":"resourcefulcrops:BlockROre",
                "size":8,
                "variation":4,
-               "frequency":4,
+               "frequency":2,
                "minHeight":1,
                "maxHeight":16,
                "biomes":[
@@ -74,7 +74,7 @@
                "blockID":"chancecubes:chance_Cube",
                "size":1,
                "variation":1,
-               "frequency":4,
+               "frequency":2,
                "minHeight":1,
                "maxHeight":32,
                "biomes":[
@@ -115,9 +115,9 @@
                "blockMeta":1,
                "size":16,
                "variation":8,
-               "frequency":8,
-               "minHeight":1,
-               "maxHeight":128,
+               "frequency":4,
+               "minHeight":32,
+               "maxHeight":96,
                "biomes":[
 
                ]

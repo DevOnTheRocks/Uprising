@@ -101,6 +101,12 @@
                   "<ingotGold>", {item: "bloodmagic:ItemBloodOrb:*", returnOnCraft: true}, "<ingotGold>",
                   "", "<ingotGold>", ""
                ]
+            },
+            {
+               __comment:"Furnace Recipe for Nether Osmium",
+              type: "addFurnace",
+              output: "mekanism:OreBlock:0:2",
+              with: "nethermetals:nether_osmium_ore"
             }
          ]
       }

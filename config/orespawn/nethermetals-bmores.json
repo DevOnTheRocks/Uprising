@@ -10,7 +10,7 @@
                "variation":12,
                "frequency":16,
                "minHeight":0,
-               "maxHeight":96
+               "maxHeight":128
             },
             {
                "blockID":"nethermetals:nether_lead_ore",
@@ -18,15 +18,15 @@
                "variation":12,
                "frequency":16,
                "minHeight":0,
-               "maxHeight":96
+               "maxHeight":128
             },
             {
                "blockID":"nethermetals:nether_mercury_ore",
                "size":8,
                "variation":4,
                "frequency":8,
-               "minHeight":0,
-               "maxHeight":32
+               "minHeight":32,
+               "maxHeight":64
             },
             {
                "blockID":"nethermetals:nether_nickel_ore",
@@ -34,23 +34,23 @@
                "variation":4,
                "frequency":8,
                "minHeight":0,
-               "maxHeight":96
+               "maxHeight":128
             },
             {
                "blockID":"nethermetals:nether_platinum_ore",
                "size":8,
                "variation":4,
                "frequency":8,
-               "minHeight":0,
-               "maxHeight":32
+               "minHeight":32,
+               "maxHeight":64
             },
             {
                "blockID":"nethermetals:nether_silver_ore",
                "size":8,
                "variation":8,
                "frequency":8,
-               "minHeight":0,
-               "maxHeight":32
+               "minHeight":32,
+               "maxHeight":64
             },
             {
                "blockID":"nethermetals:nether_tin_ore",
@@ -58,7 +58,7 @@
                "variation":12,
                "frequency":16,
                "minHeight":0,
-               "maxHeight":96
+               "maxHeight":128
             },
             {
                "blockID":"nethermetals:nether_zinc_ore",
@@ -66,7 +66,15 @@
                "variation":8,
                "frequency":8,
                "minHeight":0,
-               "maxHeight":96
+               "maxHeight":128
+            },
+            {
+               "blockID":"nethermetals:nether_osmium_ore",
+               "size":8,
+               "variation":12,
+               "frequency":16,
+               "minHeight":0,
+               "maxHeight":128
             }
          ]
       }
