@@ -753,7 +753,8 @@
                             lootingMultiplier: 1.5, // But taking looting into account (grants an additional 1.5  per level of looting)
                             damageType: "player", // only when being killed by the player; this can be left out, or set to other damage sources
                             inDimensions: [-1,0,1],
-                            inBiomes: ["Plains"]
+                            inBiomes: ["Plains"],
+                            isBurning: true // When on fire
                         },
                         {
                             what: "minecraft:cooked_chicken", // Make them drop cooked chicken instead when in a Forest
@@ -1018,7 +1019,9 @@
                             what: "minecraft:soul_sand",
                             min: 1,
                             max: 1,
-                            aboveBlock: "minecraft:soul_sand" // Simple form is acceptable.
+                            aboveBlock: "minecraft:soul_sand", // Simple form is acceptable.
+                            // You can also run entity callbacks when a drop occurs; this will target the harvester:
+                            onDrop: [ { type: "smite" } ]
                         },
                         {
                             // And makes it drop a mushroom when above podzol
@@ -1284,10 +1287,22 @@
                             duration: 40,
 
                             // Inventory matchers work similarly to the other versions, though each application of the effect only counts for 1 item.
-                            playerHasInventory: "minecraft:soul_sand",
-                            consumeInventory: true,
-                            minMobHealth: 3, // Only if they're at a level of HP that won't kill them.
-                            chance: 0.01 // 1% chance
+                            or: [
+                                {
+                                    playerHasInventory: "minecraft:soul_sand",
+                                    consumeInventory: true,
+                                    minMobHealth: 3, // Only if they're at a level of HP that won't kill them.
+                                    chance: 0.01 // 1% chance
+                                },
+                                {
+                                    // If Blood Magic is installed, you can also check to see if there's
+                                    // a particular quantity of demon will in the chunk:
+                                    // Types: default, corrosive, destructive, vengeful, steadfast
+                                    // Valid common values are 0 - 100
+                                    bloodMagicHasDemonWill: { type: "default", min: 10, max: 100 },
+                                    chance: 0.1 // 10% chance
+                                }
+                            ]
                         },
                         {
                             // Makes players move slowly in near pitch darkness
@@ -1302,6 +1317,11 @@
                                     // Note: SSP has some problems showing updates, but the value still gets checked fine.
                                     minStat: { name: "stat.walkOneCm", value: 1600 },
                                     maxStat: { name: "stat.walkOneCm", value: 3200 }
+                                },
+                                {
+                                    // Check if the player is wearing between 8 and 16 points of armor...
+                                    // Each point of armor being half an 'armor' icon on your bar.
+                                    armorRange: { min: 8, max: 16 }
                                 }
                             ]
                         },
@@ -1318,7 +1338,11 @@
                             // Gives varying levels of regeneration based on the light level...
                             what: "minecraft:regeneration",
                             amplifier: 2,
-                            minLightLevel: 15,
+                            or: [
+                                {minLightLevel: 15},
+                                // If you have Roots, you can check the player's mana:
+                                {rootsHasMana: {min: 38, max: 40}},
+                            ],
                             otherwise: {
                                 what: "minecraft:regeneration",
                                 amplifier: 1,
@@ -1786,6 +1810,325 @@
                     __comment: "And remove them",
                     type: "TConstruct.removeDryingRecipe",
                     // 'what' and 'with' are both optional.
+                },
+                {
+                    // You can disable/enable modifiers
+                    // Currently, modifiers include...
+                    // luck, fortifyendstone, infitool, harvestheight, fortifybone,
+                    // fortifyobsidian, fortifyknightslime, fiery, stiff, crude,
+                    // fortify, duritos, writable, silktouch, fortifyardite,
+                    // enderference, fortifywood, momentum, fortifymagmaslime,
+                    // prickly, diamond, unnatural, squeaky, crude1,
+                    // harvestwidth, fortifymanyullyn, tasty, fortifycobalt,
+                    // fortifycactus, fortifypaper, baconlicious, slimey_green,
+                    // ecological, knockback, lightweight, splintering, fractured,
+                    // poisonous, autosmelt, hellish, glowing, splinters, aridiculous,
+                    // coldblooded, spiky, haste, shulking, soulbound, aquadynamic,
+                    // fortifypigiron, reinforced, fortifyslime, fortifyfirewood,
+                    // writable2, writable1, alien, flammable, slimey_blue,
+                    // fortifyiron, superheat, established, shocking, beheading,
+                    // petramor, holy, fortifysponge, stonebound, depthdigger,
+                    // fortifyprismarine, beheading_cleaver, blasting, cheap, crumbling,
+                    // fortifyflint, fortifystone, bane_of_arthopods, sharp, dense, smite,
+                    // webbed, emerald, creative, crude2, insatiable, mending_moss, magnetic,
+                    // magnetic2, magnetic1, necrotic, fortifynetherrack, jagged,
+                    // fortifyblueslime, sharpness, cheapskate
+                    // ... though some should probably not be disabled, as they're linked directly to materials.
+                    type: "TConstruct.disableModifier",
+                    what: "glowing"
+                }
+            ]
+        },
+
+        {
+            name: "blocking",
+            operations: [
+                {
+                    __comment: "You can prevent the placing of blocks...",
+                    __result: "Prevents placing a gold block, and podzol while the set is active...",
+                    type: "preventBlock",
+                    what: [
+                        "minecraft:gold_block",
+                        {
+                            block: "minecraft:dirt",
+                            state: {
+                                variant: "podzol"
+                            }
+                        }
+                    ]
+                    // For performance reasons, this does not currently accept matchers/callbacks.
+                },
+                {
+                    __comment: "... and the using of items.",
+                    __result: "Prevents using flint and steel when it's raining",
+                    type: "preventItem",
+                    what: [
+                        "minecraft:flint_and_steel"
+                    ],
+                    // Unlike blocks, items can use all entity matchers...
+                    isRaining: { onlyOnTarget: true },
+                    // And can have a callback when they prevent something from happening:
+                    onBlock: [
+                        {
+                            type: "runPlayerCommand",
+                            command: "/tell @p Now is not the time to use that.",
+                            name: "The Server"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            name: "misc",
+            operations: [
+                {
+                    // Makes iron blocks give off a decent amount of light.
+                    // Should generally only be used in base sets, as it will only affect
+                    // blocks when they're picked up / placed down.
+                    type: "setLightLevel",
+                    what: "minecraft:iron_block",
+                    lightLevel: 0.75
+                },
+                {
+                    // Makes iron blocks take as long as Obsidian:
+                    type: "setBlockHardness",
+                    what: "minecraft:iron_block",
+                    hardness: 50.0
+                },
+                {
+                    // Make it to where sheep can walk up 2 blocks:
+                    // Note that this will always cause them to go up that much,
+                    // regardless of the actual required height of the step.
+                    // Also note: this does not work for players in 1.10
+                    type: "addEntityEvent",
+                    what: ["Sheep"],
+                    events: [
+                        {
+                            type: "setStepHeight",
+                            height: 2.0
+                        }
+                    ]
+                },
+                {
+                    // You can rename items.  This will make all diamonds be named "DIAMONDS!" instead of just "Diamond"
+                    type: "rename",
+                    what: "minecraft:diamond",
+                    name: "DIAMONDS!"
+                },
+                {
+                    // You can also adjust the durability of tools and such:
+                    type: "setItemDurability",
+                    what: "minecraft:diamond_pickaxe",
+                    // This can be set to 0 to make the tool have infinite durability, but I wouldn't suggest
+                    // doing that in a custom set, as it will cause havoc with tools that are already in-game:
+                    durability: 5
+                },
+                {
+                    // You can also force the weather in a given dimension
+                    type: "forceWeather",
+                    dimension: 0,
+                    weather: "storm"
+                }
+            ]
+        },
+
+        {
+            name: "entityInteractions",
+            operations: [
+                {
+                    // You can also define some complex interactions (right-click events) for dealing with entities...
+                    type: "addEntityInteraction",
+                    what: ["net.minecraft.entity.passive.EntityVillager"], // You may also specify any parent class for this one
+                    defaultDeny: true, // When true, this will block interactions that reach the end of the list without having an explicit action
+                    interactions: [
+                        // Each element defines a matched interaction that should be tested, in order from top to bottom:
+                        {
+                            matchedAction: "allow", // Allow the normal right-click handler to go through.  Valid options are: allow/deny/pass
+                            unmatchedAction: "pass", // Move on to the next item in the list.
+                            // The first interaction matcher to allow or deny will run, and no further processing will occur.
+                            // Otherwise, If all interactions end up passing, it either denies (if defaultDeny: true) or
+                            // allows the interaction (if defaultDeny is false, or unspecified).
+                            // These will both default to 'pass'
+
+                            // Matchers and callbacks to run on the source (ie: the player)
+                            source: {
+                                mobHasMainhand: "minecraft:stick"
+                            },
+                            target: {
+                                // Callbacks can be defined for: onAllowed, onDenied, and onPassed, though only two of those three
+                                // will ever make sense for the given interaction (for instance, in this case, our only actions are allow and pass,
+                                // therefore, 'onDenied' will never be run for this set).
+                                onAllowed: [
+                                    {
+                                        // Whisper to all players within a 5 meter radius:
+                                        type: "runPlayerCommand",
+                                        command: "/tell @a[r=5] Oh, I see you have a stick... let me trade with you.",
+                                        name: "@p" // Use the villager's name (profession)
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            // If you need to run a callback on your default action, add it in as the last element, with no matchers,
+                            // and a matchedAction of the default action you want to apply:
+                            matchedAction: "deny",
+                            target: {
+                                onDenied: [
+                                    {
+                                        type: "runPlayerCommand",
+                                        command: "/tell @a[r=5] I'm sorry, but I cannot trade with you if you aren't wielding our sacred item.",
+                                        name: "@p"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            name: "blockInteractions",
+            operations: [
+                {
+                    // Blocks can also have interaction handlers....
+                    type: "addBlockInteraction",
+                    what: ["minecraft:chest"], // These can be simple blocks or full block matchers with states.
+                    interactions: [
+                        {
+                            // They accept any block drop matcher:
+                            maxLightLevel: 6,
+                            onUsed: [
+                                // Any entity callback may be run here, and will fire when matched:
+                                {
+                                    type: "runPlayerCommand",
+                                    command: "/tell @p You cannot see well enough to open this right now.",
+                                    name: "The chest"
+                                }
+                            ],
+                            // Set this true if you want to stop processing afterwards; much like
+                            // entity interactions, interactions are processed top to bottom, and
+                            // this will stop processing after the first event that cancels.
+                            cancelAfterMatch: true
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            name: "forestry",
+            operations: [
+                {
+                    type: "Forestry.addCarpenterRecipe",
+                    output: "minecraft:gold_ingot:0:8",
+                    input: [
+                        "minecraft:gold_ore","minecraft:gold_ore","",
+                        "minecraft:cobblestone"
+                    ],
+                    fluid: "lava:1000",
+                    time: 2000 // Amount of time in ticks to complete the recipe.
+                    // There's also an option for 'box' for cartoning-type recipes
+                },
+                {
+                    type: "Forestry.addCentrifugeRecipe",
+                    input: "minecraft:slime",
+                    output: [
+                        // Each entry must have a valid item, and a chance between 0.0 and 1.0
+                        {what: "minecraft:slime_ball", chance: 1.0},
+                        {what: "minecraft:gold_nugget", chance: 0.05}
+                    ],
+                    time: 2000 // Amount of time in ticks to complete the recipe.
+                },
+                {
+                    type: "Forestry.addFabricatorRecipe",
+                    output: "minecraft:slime",
+                    input: ["minecraft:slime_ball"],
+                    fluid: "glass:500" // This must be glass, only the value matters.
+                },
+                {
+                    type: "Forestry.addFermenterRecipe",
+                    output: "water", // The output fluid
+                    input: "lava:500", // How much of what input fluid is required
+                    multiplier: 2.0, // How much more of the input fluid gets converted to the output
+                    catalyst: "minecraft:slime_ball" // The required item to ferment
+                },
+                {
+                    type: "Forestry.addMoistenerRecipe",
+                    input: "minecraft:clay_ball", // The item to use with the wheat.
+                    output: "minecraft:slime_ball", // The item to receive as a result of moistening wheat amd the input.
+                    time: 10000
+                },
+                {
+                    type: "Forestry.addSqueezerRecipe",
+                    input: ["minecraft:slime_ball"],
+                    fluid: "water:250", // The fluid the above items will be squeezed into
+                    output: "minecraft:wheat_seeds", // A random drop that has a chance of ocurring
+                    chance: 0.05, // The chance
+                    time: 200
+                },
+                {
+                    type: "Forestry.addStillRecipe",
+                    input: "water:1000",
+                    output: "lava:10",
+                    time: 10000
+                }
+            ]
+        },
+
+        {
+            name: "roots",
+            operations: [
+                {
+                    type: "Roots.addRitual",
+                    output: "minecraft:diamond_sword",
+                    input: [
+                        "minecraft:diamond"
+                    ],
+                    incense: [
+                        "minecraft:stick"
+                    ],
+                    // An array of standing stones to be used in the ritual:
+                    stones: [
+                        { tier: 1, x: -3, z: -3 }, // You can use y here as well.
+                        { tier: 1, x: -3, z:  3 },
+                        { tier: 1, x:  3, z: -3 },
+                        { tier: 1, x:  3, z:  3 },
+                        { tier: 1, x:  0, z: -3 },
+                        { tier: 1, x:  0, z:  3 },
+                        { tier: 1, x: -3, z:  0 },
+                        { tier: 1, x:  3, z:  0 }
+                    ],
+                    name: "swordyCraftingRitual", // The name of the ritual
+                    color: "#FF5555", // The primary color
+                    color2: "#99FF55" // The secondary color
+                },
+                {
+                    // A list of rituals/names can be found at:
+                    // https://github.com/RootsTeam/Roots/blob/master/src/main/java/elucent/roots/ritual/RitualManager.java
+                    type: "Roots.removeRitual",
+                    name: "banishrain"
+                },
+                {
+                    // A list of components can be found at:
+                    // https://github.com/RootsTeam/Roots/blob/master/src/main/java/elucent/roots/component/ComponentManager.java#L52-L166
+                    type: "Roots.disableDust",
+                    what: "dandelion"
+                    // There is also a "Roots.enableDust" operation to reverse this; though you can also just remove the
+                    // set the operation is a part of to enable the dust again.
+                },
+                {
+                    // Make Rose's Thorns cost quite a bit more:
+                    type: "Roots.setSpellCost",
+                    what: "rosebush",
+                    cost: 20 // About half a mana bar
+                },
+                {
+                    // You can also change the reagents used in a dust; there must be at least 3 reagents used:
+                    type: "Roots.setReagents",
+                    what: "rosebush",
+                    reagents: ["minecraft:diamond","minecraft:string","minecraft:diamond_sword"]
                 }
             ]
         }
