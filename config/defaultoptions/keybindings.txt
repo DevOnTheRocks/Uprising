@@ -43,7 +43,7 @@ key_quark.keybind.toggleAutojump:0:NONE
 key_BloodMagic.keybind.open_holding:35:NONE
 key_BloodMagic.keybind.cycle_holding_pos:13:SHIFT
 key_BloodMagic.keybind.cycle_holding_neg:12:SHIFT
-key_cos.key.openCosArmorInventory:46:NONE
+key_cos.key.openCosArmorInventory:0:NONE
 key_enderio.keybind.glidertoggle:0:NONE
 key_enderio.keybind.soundlocator:0:NONE
 key_enderio.keybind.nightvision:0:NONE
@@ -68,7 +68,7 @@ key_MPM 2:0:NONE
 key_MPM 3:0:NONE
 key_MPM 4:0:NONE
 key_MPM 5:0:NONE
-key_MPM Camera:56:NONE
+key_MPM Camera:0:NONE
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jei.focusSearch:33:CONTROL
 key_key.jei.showRecipe:19:NONE
@@ -116,14 +116,14 @@ key_invtweaks.key.sort:19:NONE
 key_Mekanism Item Mode Switch:0:NONE
 key_Mekanism Armor Mode Switch:0:NONE
 key_Mekanism Voice:0:NONE
-key_key.modifier:13:NONE
+key_key.modifier:49:NONE
 key_key.quantumflux.magnet:50:NONE
 key_key.porterNextDestination:27:NONE
 key_key.porterPrevDestination:26:NONE
 key_key.journeymap.map_toggle:0:NONE
-key_key.journeymap.zoom_in:0:NONE
+key_key.journeymap.zoom_in:13:NONE
 key_key.journeymap.zoom_out:12:NONE
 key_key.journeymap.minimap_type:0:NONE
 key_key.journeymap.minimap_type:0:NONE
-key_key.journeymap.minimap_preset:43:NONE
+key_key.journeymap.minimap_preset:0:NONE
 key_key.journeymap.create_waypoint:0:NONE
