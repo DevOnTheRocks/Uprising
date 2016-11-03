@@ -60,23 +60,13 @@
                ]
             },
             {
-               "blockID":"resourcefulcrops:BlockROre",
-               "size":8,
-               "variation":4,
-               "frequency":2,
-               "minHeight":1,
-               "maxHeight":16,
-               "biomes":[
-
-               ]
-            },
-            {
-               "blockID":"chancecubes:chance_Cube",
-               "size":1,
-               "variation":1,
-               "frequency":2,
-               "minHeight":1,
-               "maxHeight":32,
+               "blockID":"immersiveengineering:ore",
+               "blockMeta":5,
+               "size":4,
+               "variation":2,
+               "frequency":0.8,
+               "minHeight":8,
+               "maxHeight":24,
                "biomes":[
 
                ]
@@ -89,7 +79,7 @@
             {
                "blockID":"tconstruct:ore",
                "blockMeta":0,
-               "size":8,
+               "size":4,
                "variation":4,
                "frequency":4,
                "minHeight":1,
@@ -101,23 +91,11 @@
             {
                "blockID":"tconstruct:ore",
                "blockMeta":1,
-               "size":8,
+               "size":4,
                "variation":4,
                "frequency":4,
                "minHeight":48,
                "maxHeight":128,
-               "biomes":[
-
-               ]
-            },
-            {
-               "blockID":"resourcefulcrops:BlockROre",
-               "blockMeta":1,
-               "size":16,
-               "variation":8,
-               "frequency":4,
-               "minHeight":32,
-               "maxHeight":96,
                "biomes":[
 
                ]
@@ -159,34 +137,6 @@
       },
       {
          "dimension":1,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"The Abyssal Wasteland",
-        "dimension":50,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"The Dreadlands",
-        "dimension":51,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"Omothol",
-        "dimension":52,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"The Dark Realm",
-         "dimension":53,
          "ores":[
 
          ]

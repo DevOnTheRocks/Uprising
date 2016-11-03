@@ -98,22 +98,11 @@
          "action":{
             "type":"quit"
          }
-      },
-      "refresh":{
-         "text":"",
-         "posX":105,
-         "posY":145,
-         "width":20,
-         "height":20,
-         "texture":"custommainmenu:textures/gui/buttons.png",
-         "action":{
-            "type":"refresh"
-         }
       }
    },
    "labels":{
       "modpack":{
-         "text":"Rebel Uprising 0.3.0",
+         "text":"Rebel Uprising 2.0.0",
          "posX":3,
          "posY":-54,
          "fontSize":1.5,

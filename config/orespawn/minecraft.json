@@ -209,29 +209,7 @@
          ]
       },
       {
-        "__comment":"The Abyssal Wasteland",
-        "dimension":50,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"The Dreadlands",
-        "dimension":51,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"Omothol",
-        "dimension":52,
-         "ores":[
-
-         ]
-      },
-      {
-        "__comment":"The Dark Realm",
-         "dimension":53,
+        "dimension":1,
          "ores":[
 
          ]
