@@ -1,0 +1,208 @@
+{
+  "basic": [
+    [
+      {
+        "ore": "SurfaceCoalOre",
+        "minY": 0,
+        "maxY": 132,
+        "rarity": 24,
+        "veinMinimum": 2,
+        "veinMultiplier": 17,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceDiamondOre",
+        "minY": 0,
+        "maxY": 21,
+        "rarity": 4,
+        "veinMinimum": 3,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceEmeraldOre",
+        "minY": 0,
+        "maxY": 33,
+        "rarity": 8,
+        "veinMinimum": 6,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceGoldOre",
+        "minY": 0,
+        "maxY": 34,
+        "rarity": 12,
+        "veinMinimum": 9,
+        "veinMultiplier": 9,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceIronOre",
+        "minY": 0,
+        "maxY": 69,
+        "rarity": 20,
+        "veinMinimum": 5,
+        "veinMultiplier": 19,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceLapisOre",
+        "minY": 0,
+        "maxY": 34,
+        "rarity": 16,
+        "veinMinimum": 7,
+        "veinMultiplier": 7,
+        "disableOre": false
+      },
+      {
+        "ore": "SurfaceRedstoneOre",
+        "minY": 0,
+        "maxY": 17,
+        "rarity": 24,
+        "veinMinimum": 3,
+        "veinMultiplier": 7,
+        "disableOre": false
+      }
+    ],
+    [
+      {
+        "ore": "NetherCoalOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 36,
+        "veinMinimum": 2,
+        "veinMultiplier": 17,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherDiamondOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 6,
+        "veinMinimum": 3,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherEmeraldOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 12,
+        "veinMinimum": 6,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherGoldOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 18,
+        "veinMinimum": 9,
+        "veinMultiplier": 9,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherIronOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 30,
+        "veinMinimum": 5,
+        "veinMultiplier": 19,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherLapisOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 24,
+        "veinMinimum": 7,
+        "veinMultiplier": 7,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherQuartzOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 36,
+        "veinMinimum": 5,
+        "veinMultiplier": 9,
+        "disableOre": false
+      },
+      {
+        "ore": "NetherRedstoneOre",
+        "minY": 0,
+        "maxY": 126,
+        "rarity": 72,
+        "veinMinimum": 3,
+        "veinMultiplier": 7,
+        "disableOre": false
+      }
+    ],
+    [
+      {
+        "ore": "EndCoalOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 12,
+        "veinMinimum": 2,
+        "veinMultiplier": 17,
+        "disableOre": false
+      },
+      {
+        "ore": "EndDiamondOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 2,
+        "veinMinimum": 3,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "EndEmeraldOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 4,
+        "veinMinimum": 6,
+        "veinMultiplier": 6,
+        "disableOre": false
+      },
+      {
+        "ore": "EndGoldOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 6,
+        "veinMinimum": 9,
+        "veinMultiplier": 9,
+        "disableOre": false
+      },
+      {
+        "ore": "EndIronOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 10,
+        "veinMinimum": 5,
+        "veinMultiplier": 19,
+        "disableOre": false
+      },
+      {
+        "ore": "EndLapisOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 8,
+        "veinMinimum": 7,
+        "veinMultiplier": 7,
+        "disableOre": false
+      },
+      {
+        "ore": "EndRedstoneOre",
+        "minY": 10,
+        "maxY": 60,
+        "rarity": 24,
+        "veinMinimum": 3,
+        "veinMultiplier": 7,
+        "disableOre": false
+      }
+    ]
+  ]
+}
